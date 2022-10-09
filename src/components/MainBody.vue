@@ -1,9 +1,7 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      Get ready to get live.
-    </p>
+  <div class="pageContents">
+    <h2>{{ contentTitle }}</h2>
+
   </div>
 
 </template>
@@ -12,7 +10,7 @@
 export default {
   name: 'MainBody',
   props: {
-    msg: String
+    contentTitle: String
   }
 }
 </script>
