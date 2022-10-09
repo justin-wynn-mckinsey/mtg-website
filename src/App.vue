@@ -1,18 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <div>
+    <img id="topLogo" alt="MTG logo" src="./assets/logo.png">
+  </div>
+
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/news">News</router-link> |
+    <router-link to="/events">Events</router-link> |
+    <router-link to="/teams">Teams</router-link> |
+    <router-link to="/rosters">Rosters</router-link> |
+    <router-link to="/facilities">Facilities</router-link> |
+    <router-link to="/ourstory">Our Story</router-link> |
+    <router-link to="/contact">Contact US</router-link>
+  </nav>
+  <router-view/>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
 <style>
 #app {
@@ -20,7 +23,31 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #a5a8ab;
+  background-color: #333333;
+  height: 100vh;
+
 }
+
+nav {
+  padding: 30px;
+  background-color: #a9382e;
+}
+
+nav a {
+  font-weight: bold;
+  color: #bdb6b5;
+}
+
+nav a.router-link-exact-active {
+  color: #333333;
+}
+
+#topLogo {
+  border-radius: 50%;
+  width: 12%;
+  margin-top: 0%;
+}
+
+
 </style>
