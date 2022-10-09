@@ -4,7 +4,7 @@
       <MainBody contentTitle="Have a question we havem't answered? Send us an meail!"/>
 
       <div id="contactUsForm" class="forms">
-        
+        <p>form here</p>
       </div>
   </template>
   
