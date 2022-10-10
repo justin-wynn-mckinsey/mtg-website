@@ -3,15 +3,16 @@
 
 <nav  class="menu">
     <img id="topLogo" alt="MTG logo" src="../assets/logo.png">
-  
-      <router-link to="/">Home</router-link> |
-      <router-link to="/news">News</router-link> |
-      <router-link to="/events">Events</router-link> |
-      <router-link to="/teams">Teams</router-link> |
-      <router-link to="/rosters">Rosters</router-link> |
-      <router-link to="/facilities">Facilities</router-link> |
-      <router-link to="/ourstory">Our Story</router-link> |
-      <router-link to="/contact">Contact Us</router-link>
+    <ul>
+      <li> <router-link to="/">Home</router-link> |> </li>
+      <li> <router-link to="/news">News</router-link> | </li>
+      <li> <router-link to="/events">Events</router-link> | </li>
+      <li> <router-link to="/teams">Teams</router-link> | </li>
+      <li> <router-link to="/rosters">Rosters</router-link> | </li>
+      <li> <router-link to="/facilities">Facilities</router-link> | </li>
+      <li> <router-link to="/ourstory">Our Story</router-link> | </li>
+      <li> <router-link to="/contact">Contact Us</router-link> </li>
+    </ul>
 </nav>
 </template>
 
@@ -25,28 +26,31 @@ export default {
 <style scoped>
 
 a {
-  color: #e4f0eb;
+  color: var(--white-color)
 }
 
 .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .menu li {
-  padding: 8px;
-  margin-bottom: 7px;
-  background-color: #33b5e5;
-  color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  display: inline;
+  padding: 10px;
+  color: var(--white-color);
+  float: center;
+  border-right:1px solid var(--wh);
 }
 
-.menu li:hover, .menu a:hover {
+.menu li:last-child {
+  border-right: none;
+}
+.menu li:hover {
   color: #535758;
   background-color: #eeeded;
   background-blend-mode: lighten;
-  border-radius: 3%;
 }
 
 .aside {
@@ -60,15 +64,22 @@ a {
 
 #topLogo {
   border-radius: 50%;
-  width: 20%;
-  margin-top: 0%;
+  width: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 nav {
   padding: 30px;
-  background-color: #880029;
+  background-color: var(--maroon-color);
   display: block;
   text-align: center;
+  font-size: 200%;
+
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 nav a {
@@ -77,7 +88,7 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #333333;
+  color: var(--black-color);
 }
 
 

@@ -69,7 +69,7 @@
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Reckoner", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -78,7 +78,34 @@
   height: 100vh;
 }
 
+@font-face {
+  font-family: "Elianto";
+  src: local("fonts"),
+   url(./fonts/Elianto-Regular.ttf) format("truetype");
+}
 
+@font-face {
+  font-family: "Reckoner";
+  src: local("fonts"),
+   url(./fonts/Reckoner.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Reckoner_Bold";
+  src: local("fonts"),
+   url(./fonts/Reckoner_Bold.ttf) format("truetype");
+}
+
+:root {
+   /* Palette */
+   --maroon-color: #880029;
+   --black-color: #051822;
+   --white-color: #FFF2DF;
+
+  
+  /* App Theme / Brand */
+
+}
 
 
 </style>
