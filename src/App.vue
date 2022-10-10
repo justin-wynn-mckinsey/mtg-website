@@ -1,23 +1,73 @@
 <template>
-
-  <div>
-    <img id="topLogo" alt="MTG logo" src="./assets/logo.png">
-  </div>
-
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/news">News</router-link> |
-    <router-link to="/events">Events</router-link> |
-    <router-link to="/teams">Teams</router-link> |
-    <router-link to="/rosters">Rosters</router-link> |
-    <router-link to="/facilities">Facilities</router-link> |
-    <router-link to="/ourstory">Our Story</router-link> |
-    <router-link to="/contact">Contact US</router-link>
-  </nav>
-  <router-view/>
+<meta name="viewport" content="height =width=device-width, initial-scale=1.0">
+<router-view/>
 </template>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,28 +76,12 @@
   color: #a5a8ab;
   background-color: #333333;
   height: 100vh;
-
 }
 
-nav {
-  padding: 30px;
-  background-color: #a9382e;
-}
 
-nav a {
-  font-weight: bold;
-  color: #bdb6b5;
-}
-
-nav a.router-link-exact-active {
-  color: #333333;
-}
-
-#topLogo {
-  border-radius: 50%;
-  width: 12%;
-  margin-top: 0%;
-}
 
 
 </style>
+
+
+

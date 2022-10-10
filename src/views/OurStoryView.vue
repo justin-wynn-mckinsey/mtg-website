@@ -1,5 +1,23 @@
 <template>
-    <div class="ourStory">
-      <h1>This is our story</h1>
+    <div class="page">
+      <MenuBar>    </MenuBar>
+      <TitleCard title="Our Story"/>
+      <MainBody contentTitle="How we've progressed"/>
     </div>
   </template>
+
+<script>
+// @ is an alias to /src
+import MainBody from '@/components/MainBody.vue'
+import TitleCard from '@/components/TitleCard.vue'
+import MenuBar from '@/components/MenuBar.vue'
+
+export default {
+  name: 'HomeView',
+  components: {
+    TitleCard,
+    MainBody, 
+    MenuBar
+  }
+}
+</script>
