@@ -44,7 +44,6 @@ a {
   color: var(--white-color);
   text-decoration: none;
 }
-
 .menu ul {
   list-style-type: none;
   margin: 0;
