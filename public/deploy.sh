@@ -12,3 +12,4 @@ git add -A
 git commit -m 'deploy'
 git push -f git@github.com:maroontigergaming/mtg-website.git master:gh-pages
 cd -
+chmod +x deploy.sh
