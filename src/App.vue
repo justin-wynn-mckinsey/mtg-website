@@ -66,15 +66,16 @@
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
+  nav {font-size: 300%;}
 }
 
 #app {
-  font-family: "Reckoner", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Reckoner_Bold", "Reckoner", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #a5a8ab;
-  background-color: #333333;
+  color: var(--white-color);
+  background-color: var(--black-color);
   height: 100vh;
 }
 
@@ -94,7 +95,12 @@
   font-family: "Reckoner_Bold";
   src: local("fonts"),
    url(./fonts/Reckoner_Bold.ttf) format("truetype");
+   font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
 }
+
 
 :root {
    /* Palette */

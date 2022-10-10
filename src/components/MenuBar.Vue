@@ -4,14 +4,14 @@
 <nav  class="menu">
     <img id="topLogo" alt="MTG logo" src="../assets/logo.png">
     <ul>
-      <li> <router-link to="/">Home</router-link> |> </li>
-      <li> <router-link to="/news">News</router-link> | </li>
-      <li> <router-link to="/events">Events</router-link> | </li>
-      <li> <router-link to="/teams">Teams</router-link> | </li>
-      <li> <router-link to="/rosters">Rosters</router-link> | </li>
-      <li> <router-link to="/facilities">Facilities</router-link> | </li>
-      <li> <router-link to="/ourstory">Our Story</router-link> | </li>
-      <li> <router-link to="/contact">Contact Us</router-link> </li>
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/news">News</router-link></li>
+      <li><router-link to="/events">Events</router-link></li>
+      <li><router-link to="/teams">Teams</router-link></li>
+      <li><router-link to="/rosters">Rosters</router-link></li>
+      <li><router-link to="/facilities">Facilities</router-link></li>
+      <li><router-link to="/ourstory">Our Story</router-link></li>
+      <li><router-link to="/contact">Contact Us</router-link></li>
     </ul>
 </nav>
 </template>
@@ -38,19 +38,15 @@ a {
 
 .menu li {
   display: inline;
-  padding: 10px;
+  padding: 5px;
   color: var(--white-color);
   float: center;
-  border-right:1px solid var(--wh);
+  border-right:1px solid var(--white-color);
 }
 
-.menu li:last-child {
-  border-right: none;
-}
+
 .menu li:hover {
-  color: #535758;
-  background-color: #eeeded;
-  background-blend-mode: lighten;
+  color: var(--black-color);
 }
 
 .aside {
@@ -72,19 +68,17 @@ a {
 }
 
 nav {
-  padding: 30px;
   background-color: var(--maroon-color);
   display: block;
   text-align: center;
-  font-size: 200%;
-
+  font-size: 170%;
+  font-weight: bold;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-nav a {
-  font-weight: bold;
-  color: #bdb6b5;
+li a:hover:not(.active) {
+  background-color: #111;
 }
 
 nav a.router-link-exact-active {
