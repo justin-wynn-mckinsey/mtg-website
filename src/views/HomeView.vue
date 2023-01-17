@@ -2,10 +2,7 @@
   <div class="page">
     <MenuBar class="menuBar">    </MenuBar>
     <TitleCard title="Welcome to the Future MTG App"/>
-    <MainBody contentTitle="Main Body Titile" showContainer="true"/>
-    <p>
-      Get ready to get live.
-    </p>
+    <MainBody contentTitle="Big things are on the way...." showContainer="true"/>
   </div>
 </template>
 

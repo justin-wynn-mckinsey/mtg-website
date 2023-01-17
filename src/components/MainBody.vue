@@ -1,12 +1,17 @@
 <template>
   <div id="main">
+
     <div v-if="showContainer" class="container">
-        <div class="left-box"></div>
+
+        <div class="left-box">
+          <img id="store" v-bind:src="/Users/justinwynn/EsportsClub/mtg-website/src/assets/Morehouse-College-Jersey-Front.png" v-on:mouseover="changeImage" v-on:mouseout="resetImage" v-on:click="redirect">
+        </div>
         <hr>
         <div class="right-box">
             <div class="right-box-rectangle"></div>
             <div class="right-box-rectangle"></div>
         </div>
+
     </div>
 
     <div v-else-if="contactCard" class="card">
@@ -30,6 +35,7 @@
         <button type="submit">Send</button>
       </form>
     </div>
+
 
     <div v-else-if="storyline" class="story">
       <p>The mission of our organization is different than an current SO because
@@ -61,9 +67,10 @@ export default {
       email: '',
       subject: '',
       message: '',
-    };
+      imageSrc: '/Users/justinwynn/EsportsClub/mtg-website/src/assets/Morehouse-College-Jersey-Front.png',
+      hoverImageSrc: '/Users/justinwynn/EsportsClub/mtg-website/src/assets/Morehouse-College-Jersey-Back.png'
+    }
   },
-
   props: {
     contentTitle: String,
 
@@ -96,6 +103,15 @@ export default {
         console.error(error);
       }
     },
+    changeImage: function() {
+            this.imageSrc = this.hoverImageSrc;
+    },
+    resetImage: function() {
+            this.imageSrc = '/assets/Morehouse-College-Jersey-Front.png';
+    },
+    redirect: function() {
+            window.location.href = "https://esportsgear.com/collections/morehouse-college";
+    }
   },
 };
 </script>
@@ -198,4 +214,7 @@ h2{
   display: block;
 }
 
+#store{
+  width:100%;
+}
 </style>

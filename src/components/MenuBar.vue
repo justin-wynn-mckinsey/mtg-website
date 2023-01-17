@@ -7,7 +7,7 @@
       <li>
         <router-link to="/">Home</router-link>
       </li>
-      <li>
+<!--  <li>
         <router-link to="/news">News</router-link>
       </li>
       <li>
@@ -22,6 +22,7 @@
       <li>
         <router-link to="/facilities">Facilities</router-link>
       </li>
+      -->
       <li>
         <router-link to="/ourstory">Our Story</router-link>
       </li>
@@ -76,10 +77,10 @@ a:hover {
   border-radius: 50%;
   width: auto 10%;
   position: relative;
-  top: 10px;
+  top: 5px;
   display: inline-block;
   max-height: 50px;
-
+  padding-top: 1%;
 }
 
 nav {
