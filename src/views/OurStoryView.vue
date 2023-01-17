@@ -2,7 +2,7 @@
     <div class="page">
       <MenuBar>    </MenuBar>
       <TitleCard title="Our Story"/>
-      <MainBody contentTitle="How we've progressed"/>
+      <MainBody contentTitle="How we've progressed" storyline="true"/>
     </div>
   </template>
 
@@ -13,7 +13,12 @@ import TitleCard from '@/components/TitleCard.vue'
 import MenuBar from '@/components/MenuBar.vue'
 
 export default {
-  name: 'HomeView',
+  name: 'OurStoryView',
+  data() {
+        return {
+            currentPage: 'ourstory'
+        }
+    },
   components: {
     TitleCard,
     MainBody, 

@@ -44,6 +44,10 @@ a {
   color: var(--white-color);
   text-decoration: none;
 }
+
+a:hover {
+  color: var(--white-color);
+}
 .menu ul {
   list-style-type: none;
   margin: 0;
@@ -59,11 +63,6 @@ a {
   border-right: 1px solid var(--white-color);
 }
 
-
-.menu li:hover {
-  color: var(--black-color);
-}
-
 .aside {
   background-color: #33b5e5;
   padding: 15px;
@@ -75,10 +74,12 @@ a {
 
 #topLogo {
   border-radius: 50%;
-  width: 10%;
+  width: auto 10%;
   position: relative;
   top: 10px;
-  display: inline-block
+  display: inline-block;
+  max-height: 50px;
+
 }
 
 nav {
@@ -96,6 +97,10 @@ li a:hover:not(.active) {
 
 nav a.router-link-exact-active {
   color: var(--black-color);
+}
+
+nav a.router-link-exact-active:hover {
+  color: var(--white-color);
 }
 
 </style>

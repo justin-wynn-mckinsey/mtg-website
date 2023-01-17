@@ -2,12 +2,8 @@
     <div class="page">
       <MenuBar></MenuBar>
       <TitleCard title="CONTACT US"/>
-      <MainBody contentTitle="Have a question we havem't answered? Send us an meail!"/>
-
-      <div id="contactUsForm" class="forms">
-        <p>form here</p>
+      <MainBody contentTitle="Have a question we haven't answered? Send us an email!" contactCard="true"/>
       </div>
-    </div>
   </template>
   
   <script>
@@ -19,6 +15,11 @@
   
   export default {
     name: 'ContactView',
+    data() {
+        return {
+            currentPage: 'contact'
+        }
+    },
     components: {
       TitleCard,
       MainBody,
