@@ -1,10 +1,58 @@
+<script>
+
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+      imageSrc: '/assets/Morehouse-College-Jersey-Front.png',
+      hoverImageSrc: 'src/assets/Morehouse-College-Jersey-Back.png'
+    }
+  },
+  props: {
+    contentTitle: String,
+
+    showContainer: {
+      type: Boolean,
+      default: false
+    },
+
+    contactCard: {
+      type: Boolean,
+      default: false
+    },
+
+    storyline: {
+      type: Boolean,
+      default: false
+    }
+  },
+  methods: {
+    async submitForm() {
+    },
+    changeImage: function() {
+            this.imageSrc = this.hoverImageSrc;
+    },
+    resetImage: function() {
+            this.imageSrc = '/assets/Morehouse-College-Jersey-Front.png';
+    },
+    redirect: function() {
+            window.location.href = "https://esportsgear.com/collections/morehouse-college";
+    }
+  },
+};
+</script>
+
+
 <template>
   <div id="main">
 
     <div v-if="showContainer" class="container">
 
         <div class="left-box">
-          <img id="store" v-bind:src="/Users/justinwynn/EsportsClub/mtg-website/src/assets/Morehouse-College-Jersey-Front.png" v-on:mouseover="changeImage" v-on:mouseout="resetImage" v-on:click="redirect">
+          <img id="store" v-bind:src="src/assets/Morehouse-College-Jersey-Front.png" v-on:mouseover="changeImage" v-on:mouseout="resetImage" v-on:click="redirect">
         </div>
         <hr>
         <div class="right-box">
@@ -56,67 +104,6 @@ whether it be competition, recreation, relaxation, or organization.
   <h2>{{ contentTitle }}</h2>
 
 </template>
-
-<script>
-import axios from 'axios';
-
-export default {
-  data() {
-    return {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-      imageSrc: '/Users/justinwynn/EsportsClub/mtg-website/src/assets/Morehouse-College-Jersey-Front.png',
-      hoverImageSrc: '/Users/justinwynn/EsportsClub/mtg-website/src/assets/Morehouse-College-Jersey-Back.png'
-    }
-  },
-  props: {
-    contentTitle: String,
-
-    showContainer: {
-      type: Boolean,
-      default: false
-    },
-
-    contactCard: {
-      type: Boolean,
-      default: false
-    },
-
-    storyline: {
-      type: Boolean,
-      default: false
-    }
-  },
-  methods: {
-    async submitForm() {
-      try {
-        const response = await axios.post('/api/send-email', {
-          name: this.name,
-          email: this.email,
-          subject: this.subject,
-          message: this.message,
-        });
-        console.log(response);
-      } catch (error) {
-        console.error(error);
-      }
-    },
-    changeImage: function() {
-            this.imageSrc = this.hoverImageSrc;
-    },
-    resetImage: function() {
-            this.imageSrc = '/assets/Morehouse-College-Jersey-Front.png';
-    },
-    redirect: function() {
-            window.location.href = "https://esportsgear.com/collections/morehouse-college";
-    }
-  },
-};
-</script>
-
-
 
 
 
